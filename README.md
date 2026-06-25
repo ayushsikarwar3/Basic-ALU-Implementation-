@@ -19,3 +19,5 @@ This project focuses on building and simulating a 4-bit Arithmetic Logic Unit (A
 - 4-bit Adder
 - Switches (Inputs)
 - LEDs (Outputs)
+# Simulation Tools
+- Tinkercad Circuits
