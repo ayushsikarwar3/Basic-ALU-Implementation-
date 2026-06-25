@@ -10,3 +10,12 @@ This project focuses on building and simulating a 4-bit Arithmetic Logic Unit (A
 - To gain practical experience in building and testing digital circuits.
 - To strengthen the understanding of digital electronics and combinational logic.
 - To develop a strong foundation for future work in digital system design, FPGA, and VLSI technologies.
+ # Components Required-
+- AND Gates
+- OR Gates
+- XOR Gates
+- NOT Gates
+- Multiplexers (MUX)
+- 4-bit Adder
+- Switches (Inputs)
+- LEDs (Outputs)
