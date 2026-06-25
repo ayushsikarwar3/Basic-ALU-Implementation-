@@ -1,2 +1,4 @@
 # Basic-ALU-Implementation-
 Created a 4-bit Arithmetic Logic Unit (ALU) using combinational logic components such as logic gates, full adders, and multiplexers. Successfully simulated and verified various arithmetic and logical operations, strengthening practical knowledge of digital circuit design and computer architecture fundamentals.
+# overview-
+This project focuses on building and simulating a 4-bit Arithmetic Logic Unit (ALU) using basic digital components such as logic gates, full adders, and multiplexers, without relying on Verilog. The ALU is capable of performing operations like addition, subtraction, AND, OR, and XOR. Working on this project provided practical experience in digital circuit design and helped develop a better understanding of how arithmetic and logical functions are implemented at the hardware level. It also strengthened core concepts of digital electronics and combinational logic design.
