@@ -21,3 +21,5 @@ This project focuses on building and simulating a 4-bit Arithmetic Logic Unit (A
 - LEDs (Outputs)
 # Simulation Tools
 - Tinkercad Circuits
+# working principle-
+ The 4-bit ALU takes two 4-bit binary inputs and performs arithmetic or logical operations based on the selection lines. Full adders are used for arithmetic operations like addition or subtraction, whilst basic logic gates are used for logical operations like AND, OR and XOR. The multiplexer chooses the appropriate operation to output to the last multiplexer 4-bit output. This design illustrates basic processing functions using digital components and without using Verilog.
