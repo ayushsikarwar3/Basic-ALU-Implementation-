@@ -44,7 +44,7 @@ The design and simulation of 4-bit ALU with basic logic gates, full adders and m
 - Forms a basic building block of digital systems and embedded devices.
 - Assists in learning digital electronics, computer architecture and VLSI design.
 - Ideal for teaching projects, hardware circuit design.
-- 
+  
 # Skills Gained-
 
 - Better knowledge of digital logic and combinational circuits.
