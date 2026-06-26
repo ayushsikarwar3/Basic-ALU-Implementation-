@@ -1,5 +1,5 @@
 # Basic-ALU-Implementation-
-Created a 4-bit Arithmetic Logic Unit (ALU) using combinational logic components such as logic gates, full adders, and multiplexers. Successfully simulated and verified various arithmetic and logical operations, strengthening practical knowledge of digital circuit design and computer architecture fundamentals.
+Designed an ALU (Arithmetic Logic Unit) of 4 bits using combinational logic gates, full adders and multiplexers. Solved and checked several arithmetic and logical operations, enhancing the understanding of the fundamentals of digital circuit design and computer architecture.
 
 # Overview-
 
