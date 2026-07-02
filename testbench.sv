@@ -1,4 +1,10 @@
-
+// ============================================================================
+// COMPANY NAME: CODTECH IT SOLUTIONS 
+// INTERN NAME:  AYUSH SIKARWAR
+// INTERN ID:    CITS5568  
+// DOMAIN:       VLSI
+// TASK TITLE:   Design and Implementation of a Basic 4-bit ALU
+// ============================================================================
 
  `timescale 1ns / 1ps
 
