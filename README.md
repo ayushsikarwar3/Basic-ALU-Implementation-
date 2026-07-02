@@ -1,10 +1,10 @@
-# Basic-ALU-Implementation-
+# 🚀Basic-ALU-Implementation-
 Welcome to the 4-bit Arithmetic-Logic Unit (ALU) project! This project is an example of designing and simulating a simple ALU by using Verilog HDL. The ALU supports the basic arithmetic and logic functions like Addition, Subtraction, AND, OR, XOR and NOT, giving an insight into digital logic design and implementation of hardware.
 
 # Overview-
 This project focuses on the design and implementation of a 4-bit ALU using Verilog HDL, a fundamental building block of modern digital processors and VLSI systems. The ALU is designed to perform essential arithmetic operations such as addition and subtraction, along with logical operations including AND, OR, XOR, and NOT. The design is described using Verilog, simulated to verify correct functionality, and tested with different input combinations to ensure reliable operation. Through this project, practical knowledge of hardware description, digital logic design, simulation, and verification is gained, providing a strong foundation for advanced VLSI and FPGA-based digital system development.
 
-# Objectives-
+# 📌Objectives-
 
 - Create a 4-bit Arithmetic Logic Unit (ALU) in Verilog HDL.
 - Carry out addition and subtraction of simple numbers.
@@ -15,7 +15,7 @@ This project focuses on the design and implementation of a 4-bit ALU using Veril
 - Apply digital design, simulation and functional verification skills to gain practical experience.
 - Develop and consolidate concepts for VLSI design, FPGA development and processor architecture.
   
- # Hardware Specifications & Pin Configuration
+ # ⚙️Hardware Specifications & Pin Configuration
 The module alu_4bit consists of two 4-bit data operands, a 3-bit control input, a 4-bit result output, and two critical status flags.
 
 Pin Definitions
@@ -28,7 +28,7 @@ Pin Definitions
 | `carry_out` | Output | 1-bit | Carry Flag (Addition) / Borrow Flag (Subtraction) |
 | `zero_flag` | Output | 1-bit | Active High when `alu_result == 4'b0000` |
 
-# Functional Operation Table (Truth Table)-
+# 🛠️Functional Operation Table (Truth Table)-
 
 The 3-bit alu_control bus selects one of the 8 distinct functional modes:
 | Control Code (`alu_control`) | Operation Type | Operation | Mathematical / Logical Expression |
@@ -115,7 +115,7 @@ module alu_4bit (
 endmodule
 ```
 ---
-#  Testbench Code (`tb_alu_4bit.v`)
+#  💻Testbench Code (`tb_alu_4bit.v`)
 ```verilog
 `timescale 1ns / 1ps
 
@@ -193,7 +193,8 @@ Time=60dns | Control=100 | A=1111 B=1111 | Result=0000 | Carry=0 | Zero=1
 Time=70dns | Control=110 | A=0011 B=0000 | Result=0110 | Carry=0 | Zero=0
 ```
 ---
-# 4. Simulation Results & Outputs Explanation-
+# 📺 Simulation Results & Outputs Explanation-
+
 
 - Time = 0ns (Initialization): Inputs `A` and `B` are both `0`, making the output result `0`. Therefore, Zero Flag = 1.
 - Time = 10ns (Addition): Performs $4 + 5 = 9$ (`1001`). No overflow occurs, so Carry = 0.
@@ -204,8 +205,10 @@ Time=70dns | Control=110 | A=0011 B=0000 | Result=0110 | Carry=0 | Zero=0
 - Time = 60ns (Bitwise XOR): Executes `1111 ^ 1111`. Since both inputs are identical, all bits cancel out to `0`, setting Zero Flag = 1.
 - Time = 70ns (Left Shift): Operates on `A = 0011` (Decimal 3). Shifting it left by 1 bit updates the value to `0110` (Decimal 6).
 ---
+# Simulation Waveforms (EPWave)-
+<img width="1080" height="2408" alt="Screenshot_20260601_145906" src="https://github.com/user-attachments/assets/4a0a207e-6a97-403d-bad3-56ded9b47300" />
 
-#  Conclusion- 
+# 📝Conclusion- 
 
 The design satisfies all constraints specified for a basic 4-bit processing block. Simulation trace validation verifies exact execution behavior matching across all basic arithmetic, logic, tracking, and flag monitoring pipelines without introducing physical latching anomalies.
 
