@@ -19,13 +19,17 @@ This project focuses on the design and implementation of a 4-bit ALU using Veril
 The module alu_4bit consists of two 4-bit data operands, a 3-bit control input, a 4-bit result output, and two critical status flags.
 
 Pin Definitions
-Pin Name	Direction	Bit Width	Description
-a	Input	4-bit [3:0]	Operand A
-b	Input	4-bit [3:0]	Operand B
-alu_control	Input	3-bit [2:0]	Operation Selection Code
-alu_result	Output	4-bit [3:0]	Execution Result Output
-carry_out	Output	1-bit	Carry Flag (Addition) / Borrow Flag (Subtraction)
-zero_flag	Output	1-bit	Active high when alu_result == 4'b0000
++--------------+-----------+---------------+-----------------------------------------------+
+| Pin Name     | Direction | Bit Width     | Description                                   |
++--------------+-----------+---------------+-----------------------------------------------+
+| a            | Input     | 4-bit [3:0]   | Operand A                                     |
+| b            | Input     | 4-bit [3:0]   | Operand B                                     |
+| alu_control  | Input     | 3-bit [2:0]   | Operation Selection Code                      |
+| alu_result   | Output    | 4-bit [3:0]   | Execution Result Output                       |
+| carry_out    | Output    | 1-bit         | Carry Flag (Addition) / Borrow Flag           |
+|              |           |               | (Subtraction)                                 |
+| zero_flag    | Output    | 1-bit         | Active High when alu_result == 4'b0000        |
++--------------+-----------+---------------+-----------------------------------------------+
 # Simulation Tools-
 
 - Tinkercad Circuits
