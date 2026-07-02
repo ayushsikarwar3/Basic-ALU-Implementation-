@@ -215,4 +215,12 @@ Time=70dns | Control=110 | A=0011 B=0000 | Result=0110 | Carry=0 | Zero=0
 
 The design satisfies all constraints specified for a basic 4-bit processing block. Simulation trace validation verifies exact execution behavior matching across all basic arithmetic, logic, tracking, and flag monitoring pipelines without introducing physical latching anomalies.
 
+# Author
+
+- Ayush Sikarwar|btech electronics and communication
+- linkedin-https://www.linkedin.com/in/ayush-sikarwar-a89878413?utm_source=share_via&utm_content=profile&utm_medium=member_android
+
+# License
+
+This project is licensed under the MIT License.
       
