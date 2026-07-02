@@ -206,6 +206,9 @@ Time=70dns | Control=110 | A=0011 B=0000 | Result=0110 | Carry=0 | Zero=0
 - Time = 70ns (Left Shift): Operates on `A = 0011` (Decimal 3). Shifting it left by 1 bit updates the value to `0110` (Decimal 6).
 ---
 # Simulation Waveforms (EPWave)-
+<img width="2408" height="1080" alt="Screenshot_20260601_145729" src="https://github.com/user-attachments/assets/c35ae7e2-b927-48f1-a812-8cb2f3f045d1" />
+
+# console output (epwave window)-
 <img width="1080" height="2408" alt="Screenshot_20260601_145906" src="https://github.com/user-attachments/assets/4a0a207e-6a97-403d-bad3-56ded9b47300" />
 
 # 📝Conclusion- 
