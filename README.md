@@ -27,10 +27,21 @@ Pin Definitions
 | `alu_result` | Output | 4-bit `[3:0]` | Execution Result Output |
 | `carry_out` | Output | 1-bit | Carry Flag (Addition) / Borrow Flag (Subtraction) |
 | `zero_flag` | Output | 1-bit | Active High when `alu_result == 4'b0000` |
-# Simulation Tools-
 
-- Tinkercad Circuits
-  
+# Functional Operation Table (Truth Table)-
+
+The 3-bit alu_control bus selects one of the 8 distinct functional modes:
+| Control Code (`alu_control`) | Operation Type | Operation | Mathematical / Logical Expression |
+|-------------------------------|----------------|-----------|-----------------------------------|
+| `3'b000` | Arithmetic | Addition | `{carry_out, alu_result} = a + b` |
+| `3'b001` | Arithmetic | Subtraction | `alu_result = a - b` (Carry indicates Borrow when `a < b`) |
+| `3'b010` | Logical | Bitwise AND | `alu_result = a & b` |
+| `3'b011` | Logical | Bitwise OR | `alu_result = a \| b` |
+| `3'b100` | Logical | Bitwise XOR | `alu_result = a ^ b` |
+| `3'b101` | Logical | Bitwise NOR | `alu_result = ~(a \| b)` |
+| `3'b110` | Shifting | Left Shift | `alu_result = a << 1` |
+| `3'b111` | Shifting | Right Shift | `alu_result = a >> 1` |
+
 # Working Principle-
 
  The 4-bit ALU takes two 4-bit binary inputs and performs arithmetic or logical operations based on the selection lines. Full adders are used for arithmetic operations like addition or subtraction, whilst basic logic gates are used for logical operations like AND, OR and XOR. The multiplexer chooses the appropriate operation to output to the last multiplexer 4-bit output. This design illustrates basic processing functions using digital components and without using Verilog.
