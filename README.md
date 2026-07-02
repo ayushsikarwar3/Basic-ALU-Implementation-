@@ -47,70 +47,73 @@ The 3-bit alu_control bus selects one of the 8 distinct functional modes:
 `timescale 1ns / 1ps
 
 module alu_4bit (
-    input  wire [3:0] a,           // 4-bit input operand A
-    input  wire [3:0] b,           // 4-bit input operand B
-    input  wire [2:0] alu_control, // 3-bit control signal to select operation
-    output reg  [3:0] alu_result,  // 4-bit output result of the operation
-    output reg        carry_out,   // Carry out flag for addition
-    output reg        zero_flag    // Zero flag set high if alu_result is 0
+    input  wire [3:0] a,             // 4-bit Operand A
+    input  wire [3:0] b,             // 4-bit Operand B
+    input  wire [2:0] alu_control,   // Operation Select
+    output reg  [3:0] alu_result,    // ALU Result
+    output reg        carry_out,     // Carry/Borrow Flag
+    output reg        zero_flag      // Zero Flag
 );
 
-    // Combination logic block sensitive to any change in inputs
+    // Combinational ALU Logic
     always @(*) begin
-        // Default values to prevent unwanted latches
+
+        // Default outputs
         alu_result = 4'b0000;
         carry_out  = 1'b0;
-        
+
         case (alu_control)
-            3'b000: begin // Arithmetic Addition
+
+            // 000 : Addition
+            3'b000:
                 {carry_out, alu_result} = a + b;
-            end
-            
-            3'b001: begin // Arithmetic Subtraction
+
+            // 001 : Subtraction
+            3'b001: begin
                 alu_result = a - b;
-                carry_out  = (a < b) ? 1'b1 : 1'b0; // Borrow indicator
+                carry_out  = (a < b);      // Borrow Indicator
             end
-            
-            3'b010: begin // Bitwise AND
+
+            // 010 : Bitwise AND
+            3'b010:
                 alu_result = a & b;
-            end
-            
-            3'b011: begin // Bitwise OR
+
+            // 011 : Bitwise OR
+            3'b011:
                 alu_result = a | b;
-            end
-            
-            3'b100: begin // Bitwise XOR
+
+            // 100 : Bitwise XOR
+            3'b100:
                 alu_result = a ^ b;
-            end
-            
-            3'b101: begin // Bitwise NOR
+
+            // 101 : Bitwise NOR
+            3'b101:
                 alu_result = ~(a | b);
-            end
-            
-            3'b110: begin // Logical Left Shift
+
+            // 110 : Logical Left Shift
+            3'b110:
                 alu_result = a << 1;
-            end
-            
-            3'b111: begin // Logical Right Shift
+
+            // 111 : Logical Right Shift
+            3'b111:
                 alu_result = a >> 1;
-            end
-            
-            default: begin // Default fallback
+
+            // Default Case
+            default: begin
                 alu_result = 4'b0000;
                 carry_out  = 1'b0;
             end
+
         endcase
-        
-        // Sequential evaluation for the Zero Flag
-        if (alu_result == 4'b0000) begin
-            zero_flag = 1'b1;
-        end else begin
-            zero_flag = 1'b0;
-        end
+
+        // Zero Flag Logic
+        zero_flag = (alu_result == 4'b0000);
+
     end
 
-endmodule 
- 
+endmodule
+      
+       
 # Result-
 
 The design and simulation of 4-bit ALU with basic logic gates, full adders and multiplexers has been successfully performed without using Verilog. The circuit correctly added and subtracted numbers, as well as AND, OR and XOR logic. They were able to get the expected outputs for different combinations of input, thereby proving that the design is working as intended.
