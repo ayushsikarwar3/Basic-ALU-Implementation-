@@ -44,15 +44,16 @@ The 3-bit alu_control bus selects one of the 8 distinct functional modes:
 
 # Source Code (alu_4bit.v)-
 
+```verilog
 `timescale 1ns / 1ps
 
 module alu_4bit (
-    input  wire [3:0] a,             // 4-bit Operand A
-    input  wire [3:0] b,             // 4-bit Operand B
-    input  wire [2:0] alu_control,   // Operation Select
-    output reg  [3:0] alu_result,    // ALU Result
-    output reg        carry_out,     // Carry/Borrow Flag
-    output reg        zero_flag      // Zero Flag
+    input  wire [3:0] a,           // 4-bit input operand A
+    input  wire [3:0] b,           // 4-bit input operand B
+    input  wire [2:0] alu_control, // 3-bit control signal to select operation
+    output reg  [3:0] alu_result,  // 4-bit output result of the operation
+    output reg        carry_out,   // Carry out flag for addition
+    output reg        zero_flag    // Zero flag set high if alu_result is 0
 );
 
     // Combinational ALU Logic
