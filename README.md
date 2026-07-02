@@ -1,31 +1,31 @@
 # Basic-ALU-Implementation-
-Designed an ALU (Arithmetic Logic Unit) of 4 bits using combinational logic gates, full adders and multiplexers. Solved and checked several arithmetic and logical operations, enhancing the understanding of the fundamentals of digital circuit design and computer architecture.
+Welcome to the 4-bit Arithmetic-Logic Unit (ALU) project! This project is an example of designing and simulating a simple ALU by using Verilog HDL. The ALU supports the basic arithmetic and logic functions like Addition, Subtraction, AND, OR, XOR and NOT, giving an insight into digital logic design and implementation of hardware.
 
 # Overview-
-
-This project focuses on building and simulating a 4-bit Arithmetic Logic Unit (ALU) using basic digital components such as logic gates, full adders, and multiplexers, without relying on Verilog. The ALU is capable of performing operations like addition, subtraction, AND, OR, and XOR. Working on this project provided practical experience in digital circuit design and helped develop a better understanding of how arithmetic and logical functions are implemented at the hardware level. It also strengthened core concepts of digital electronics and combinational logic design.
+This project focuses on the design and implementation of a 4-bit ALU using Verilog HDL, a fundamental building block of modern digital processors and VLSI systems. The ALU is designed to perform essential arithmetic operations such as addition and subtraction, along with logical operations including AND, OR, XOR, and NOT. The design is described using Verilog, simulated to verify correct functionality, and tested with different input combinations to ensure reliable operation. Through this project, practical knowledge of hardware description, digital logic design, simulation, and verification is gained, providing a strong foundation for advanced VLSI and FPGA-based digital system development.
 
 # Objectives-
 
-- To design and simulate a 4-bit ALU using basic digital components without using Verilog.
-- To learn how logic gates, full adders, and multiplexers work together to perform different operations.
-- To implement basic arithmetic functions such as addition and subtraction.
-- To perform logical operations like AND, OR, and XOR on binary data.
-- To gain practical experience in building and testing digital circuits.
-- To strengthen the understanding of digital electronics and combinational logic.
-- To develop a strong foundation for future work in digital system design, FPGA, and VLSI technologies.
+- Create a 4-bit Arithmetic Logic Unit (ALU) in Verilog HDL.
+- Carry out addition and subtraction of simple numbers.
+- Use logical operators AND, OR, XOR and NOT.
+- Design a modular and efficient combinational circuit.
+- Model and test ALU using various input test vectors.
+- Know the basics of Hardware Description Language (HDL) and digital circuit design.
+- Apply digital design, simulation and functional verification skills to gain practical experience.
+- Develop and consolidate concepts for VLSI design, FPGA development and processor architecture.
   
- # Components Required-
- 
-- AND Gates
-- OR Gates
-- XOR Gates
-- NOT Gates
-- Multiplexers (MUX)
-- 4-bit Adder
-- Switches (Inputs)
-- LEDs (Outputs)
-  
+ # Hardware Specifications & Pin Configuration
+The module alu_4bit consists of two 4-bit data operands, a 3-bit control input, a 4-bit result output, and two critical status flags.
+
+Pin Definitions
+Pin Name	Direction	Bit Width	Description
+a	Input	4-bit [3:0]	Operand A
+b	Input	4-bit [3:0]	Operand B
+alu_control	Input	3-bit [2:0]	Operation Selection Code
+alu_result	Output	4-bit [3:0]	Execution Result Output
+carry_out	Output	1-bit	Carry Flag (Addition) / Borrow Flag (Subtraction)
+zero_flag	Output	1-bit	Active high when alu_result == 4'b0000
 # Simulation Tools-
 
 - Tinkercad Circuits
